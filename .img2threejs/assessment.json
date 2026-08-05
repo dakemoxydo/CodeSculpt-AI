@@ -1,0 +1,517 @@
+{
+  "targetName": "Futuristic MBT Tank",
+  "sourceImage": ".img2threejs/reference.png",
+  "preSpecAssessment": {
+    "objectClass": {
+      "primaryType": "futuristic main battle tank",
+      "primaryDomain": "object",
+      "formLanguage": [
+        "hard-surface",
+        "mechanical",
+        "faceted-geometric"
+      ],
+      "structureKind": [
+        "compound object",
+        "layered shell",
+        "repeated modules",
+        "articulated assembly"
+      ],
+      "motionPotential": [
+        "whole-object transform",
+        "turret rotation",
+        "barrel elevation",
+        "detachable components",
+        "destructible assembly"
+      ],
+      "materialFamilies": [
+        "painted metal/composite",
+        "dark gunmetal",
+        "rubber-like track pads",
+        "smoked glass"
+      ],
+      "notes": "Visible contact-sheet views support an assembled, action-ready hard-surface vehicle; hidden internals are conditional approximations."
+    },
+    "complexity": {
+      "tier": "complex",
+      "scores": {
+        "silhouetteComplexity": 3,
+        "componentCount": 3,
+        "hierarchyDepth": 3,
+        "repetitionDensity": 3,
+        "materialLayerCount": 2,
+        "localDetailDensity": 3,
+        "occlusionRisk": 2,
+        "actionReadinessNeed": 3
+      },
+      "estimatedCounts": {
+        "macroComponents": 3,
+        "mesoComponents": 8,
+        "microFeatureGroups": 5,
+        "materialLayers": 3,
+        "repetitionSystems": 3
+      },
+      "reasoning": [
+        "The reference shows multiple independently articulated assemblies, repeated track hardware, and dense panel/vent details across five views."
+      ]
+    },
+    "specDepthDecision": {
+      "requiredDepth": "complex",
+      "minimumComponentLevels": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "needsRepetitionSystems": true,
+      "needsMaterialLocalOverrides": true,
+      "needsMultipleReviewViews": true,
+      "needsActionReadyHierarchy": true,
+      "rationale": "Identity depends on the low hull silhouette, bilateral track cadence, faceted turret, cannon, and repeated armored details."
+    },
+    "unknownsToResolveBeforeImplementation": [],
+    "detailInventory": {
+      "scanMethod": "grid-3x3",
+      "targetMinDetails": 10,
+      "note": "Identity-defining details are mapped to component localFeatures or material localOverrides.",
+      "details": [
+        {
+          "id": "turret-bevel",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "bevel",
+          "affects": "faceted chamfered turret silhouette",
+          "scale": "meso",
+          "evidenceRef": "front-three-quarter",
+          "confidence": 0.92,
+          "mapsTo": {
+            "ref": "turret_shell"
+          }
+        },
+        {
+          "id": "front-panel-seam",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "seam",
+          "affects": "recessed angular glacis seams",
+          "scale": "meso",
+          "evidenceRef": "front-three-quarter",
+          "confidence": 0.9,
+          "mapsTo": {
+            "ref": "hull_glacis"
+          }
+        },
+        {
+          "id": "wheel-cadence",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "fastener",
+          "affects": "six road-wheel stations per side",
+          "scale": "meso",
+          "evidenceRef": "side-view",
+          "confidence": 0.95,
+          "mapsTo": {
+            "ref": "road_wheels"
+          }
+        },
+        {
+          "id": "track-tread-blocks",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "ridge",
+          "affects": "repeating raised tread blocks around both loops",
+          "scale": "meso",
+          "evidenceRef": "side-view",
+          "confidence": 0.94,
+          "mapsTo": {
+            "ref": "track_links"
+          }
+        },
+        {
+          "id": "turret-canister-gloss",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "gloss",
+          "affects": "lower-roughness cylindrical side canisters",
+          "scale": "meso",
+          "evidenceRef": "front-three-quarter",
+          "confidence": 0.82,
+          "mapsTo": {
+            "ref": "turret_canisters"
+          }
+        },
+        {
+          "id": "roof-vent-linework",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "linework",
+          "affects": "dark parallel vent slots on deck and rear",
+          "scale": "meso",
+          "evidenceRef": "top-view",
+          "confidence": 0.88,
+          "mapsTo": {
+            "ref": "deck_vents"
+          }
+        },
+        {
+          "id": "rear-access-seam",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "seam",
+          "affects": "rectangular rear access plate boundaries",
+          "scale": "meso",
+          "evidenceRef": "rear-three-quarter",
+          "confidence": 0.86,
+          "mapsTo": {
+            "ref": "engine_deck"
+          }
+        },
+        {
+          "id": "barrel-rings",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "ridge",
+          "affects": "stepped barrel collars and widened muzzle",
+          "scale": "meso",
+          "evidenceRef": "front-three-quarter",
+          "confidence": 0.95,
+          "mapsTo": {
+            "ref": "main_barrel"
+          }
+        },
+        {
+          "id": "suspension-rods",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "ridge",
+          "affects": "paired exposed actuator/suspension rods",
+          "scale": "meso",
+          "evidenceRef": "front-three-quarter",
+          "confidence": 0.88,
+          "mapsTo": {
+            "ref": "suspension_rods"
+          }
+        },
+        {
+          "id": "sensor-housings",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "ridge",
+          "affects": "raised roof sensor and hatch housings",
+          "scale": "meso",
+          "evidenceRef": "top-view",
+          "confidence": 0.84,
+          "mapsTo": {
+            "ref": "sensor_cluster"
+          }
+        },
+        {
+          "id": "track-metal-edge-wear",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "scratch",
+          "affects": "subtle lighter edge wear on track hardware",
+          "scale": "meso",
+          "evidenceRef": "side-view",
+          "confidence": 0.72,
+          "mapsTo": {
+            "ref": "gunmetal_wear"
+          }
+        },
+        {
+          "id": "rear-port-darkness",
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "units": "normalized"
+          },
+          "kind": "stain",
+          "affects": "cavity-darkened rear ports and panel joints",
+          "scale": "meso",
+          "evidenceRef": "rear-three-quarter",
+          "confidence": 0.78,
+          "mapsTo": {
+            "ref": "armor_dirt"
+          }
+        }
+      ]
+    },
+    "anatomy": {
+      "applies": false,
+      "styleHeads": 0.0,
+      "proportions": {
+        "headUnit": 0.0,
+        "torso": 0.0,
+        "legs": 0.0,
+        "shoulderWidth": 0.0,
+        "hipWidth": 0.0
+      },
+      "pose": {
+        "type": "not-applicable",
+        "jointAngles": {}
+      },
+      "faceLandmarks": {
+        "eyeLine": 0.0,
+        "eyeSpacing": 0.0,
+        "noseBase": 0.0,
+        "mouthLine": 0.0,
+        "hairline": 0.0
+      },
+      "features": [],
+      "confidence": 0.0,
+      "note": "Only meaningful when objectClass.primaryDomain is character or hybrid. Set applies=true and fill from forge/stage1_intake/extract_landmarks.py. See grimoire/character/reconstruction.md and grimoire/character/likeness_maximization.md."
+    },
+    "sourceImage": ".img2threejs/reference.png"
+  },
+  "qualityContract": {
+    "qualityBar": "complex",
+    "definitionOfDone": [
+      "The model reads as the supplied futuristic tank from front, rear, side, top, and orbit views.",
+      "Hull, turret, barrel, tracks, wheels, vents, canisters, and suspension are independent named pivots.",
+      "Explode mode separates the major assemblies while preserving readable parent-child spacing and attachment metadata.",
+      "Olive satin painted armor, dark gunmetal track hardware, and cool glass accents remain readable under turntable lighting."
+    ],
+    "minimumSpecDepth": {
+      "macroComponents": 3,
+      "mesoComponents": 8,
+      "microFeatureGroups": 5,
+      "materialLayers": 3,
+      "repetitionSystems": 1,
+      "reviewViewpoints": 4
+    },
+    "featureGroups": [
+      {
+        "id": "silhouette",
+        "name": "Hull, track, and turret silhouette",
+        "required": true,
+        "qualityCriteria": [
+          "Low elongated hull, wedge glacis, bilateral tracks, and turret proportions match the visible reference views."
+        ],
+        "evidenceRefs": [
+          "front-three-quarter",
+          "side-view",
+          "frontal-view"
+        ],
+        "failureModes": [
+          "generic box tank",
+          "tracks merge into hull",
+          "turret too tall or too small"
+        ]
+      },
+      {
+        "id": "mechanical-hierarchy",
+        "name": "Mechanical component hierarchy",
+        "required": true,
+        "qualityCriteria": [
+          "Turret rotates around a central ring, barrel is rooted in the mantlet, and tracks/wheels form independent child assemblies."
+        ],
+        "evidenceRefs": [
+          "front-three-quarter",
+          "top-view"
+        ],
+        "failureModes": [
+          "floating barrel",
+          "missing track clearance",
+          "merged articulated parts"
+        ]
+      },
+      {
+        "id": "surface-material",
+        "name": "Painted armor and gunmetal response",
+        "required": true,
+        "qualityCriteria": [
+          "Olive armor has satin roughness variation, darker cavities, chamfer highlights, and independent gunmetal/glass accents."
+        ],
+        "evidenceRefs": [
+          "full-object",
+          "rear-three-quarter"
+        ],
+        "failureModes": [
+          "flat plastic",
+          "uniform green",
+          "unreadable dark hardware"
+        ]
+      }
+    ],
+    "visualDeltaChecks": [
+      "hull length/width/height and wedge glacis",
+      "turret footprint and barrel projection",
+      "track loop radius and six-wheel cadence",
+      "vent/canister/suspension placement",
+      "olive/gunmetal/glass material separation"
+    ],
+    "antiShallowSpecRules": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md).",
+      "Adjacent components must overlap by at least 0.02 world units at shared seams (source: grimoire/build/geometry_patterns.md).",
+      "Raised or recessed relief and fasteners must be geometry, instanced micro-parts, or displacement; a map alone is an approximation (source: grimoire/build/geometry_patterns.md)."
+    ],
+    "mustNotDo": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md).",
+      "Adjacent components must overlap by at least 0.02 world units at shared seams (source: grimoire/build/geometry_patterns.md).",
+      "Raised or recessed relief and fasteners must be geometry, instanced micro-parts, or displacement; a map alone is an approximation (source: grimoire/build/geometry_patterns.md)."
+    ]
+  },
+  "localSpecSearch": {
+    "collection": "core_3d",
+    "query": "Futuristic MBT Tank tracked hard-surface tank hull turret barrel suspension road wheels vents armor painted metal",
+    "index": {
+      "status": "hit",
+      "reason": "current",
+      "fingerprint": "ac4f0bc9028e34083dbb5d5531ae3df7699c8e7641d5f8e6d42e7492ea1be1d0"
+    },
+    "matches": [
+      {
+        "record_id": "core.topology-intent",
+        "file_path": "grimoire/glossary/3d_vocabulary.md",
+        "heading": "Geometry And Topology",
+        "key_path": null,
+        "score": 5.143858634031,
+        "snippets": [
+          "Topology intent classifies a surface as hard-surface blockout, subdivision-ready, low-poly prop, organic deformed mesh, or alpha-card cluster."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/glossary/3d_vocabulary.md",
+            "heading": "Geometry And Topology",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/glossary/3d_vocabulary.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      },
+      {
+        "record_id": "core.shader-mapping-cylindergeometry-barrels-round-components",
+        "file_path": "docs/raw/img2threejs-skill-dataset.json",
+        "heading": null,
+        "key_path": "categories.rendering_shader_mapping[4]",
+        "score": 3.752966399396,
+        "snippets": [
+          "... part. Ánh xạ tới mọi bộ phận có tiết diện tròn dạng nòng. Recognition cues: Long uniform-cross-section round part (barrel, suppressor, muzzle brake body, cleaning rod, magazine tube) Dấu hiệu nhận diện: Bộ phận tròn có tiết diện đều ..."
+        ],
+        "source_refs": [
+          {
+            "path": "docs/raw/img2threejs-skill-dataset.json",
+            "heading": null,
+            "key_path": "categories.rendering_shader_mapping[4]"
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "docs/raw/img2threejs-skill-dataset.json",
+            "note": "img2threejs NotebookLM research distillation"
+          }
+        ]
+      },
+      {
+        "record_id": "core.pbr-anisotropy",
+        "file_path": "docs/raw/img2threejs-skill-dataset.json",
+        "heading": null,
+        "key_path": "categories.material_pbr[6]",
+        "score": 2.97305122627,
+        "snippets": [
+          "Directional specular stretching seen on brushed or grooved metal, where reflections elongate along the grain direction. Hiện tượng phản xạ specular kéo dài theo một hướng, thấy trên kim loại được chải xước hoặc có rãnh, phản xạ kéo dài theo ..."
+        ],
+        "source_refs": [
+          {
+            "path": "docs/raw/img2threejs-skill-dataset.json",
+            "heading": null,
+            "key_path": "categories.material_pbr[6]"
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "docs/raw/img2threejs-skill-dataset.json",
+            "note": "img2threejs NotebookLM research distillation"
+          }
+        ]
+      }
+    ]
+  },
+  "authoringInstruction": ""
+}

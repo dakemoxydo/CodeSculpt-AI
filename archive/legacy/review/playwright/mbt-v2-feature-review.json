@@ -1,0 +1,6 @@
+[
+  {"id":"hull-silhouette","score":0.78,"status":"improved","notes":"Corrected the hull axis frame and rebuilt the nose as a split angular glacis; the main front profile is still less faceted than the reference."},
+  {"id":"turret-cannon-system","score":0.76,"status":"improved","notes":"Lower faceted turret, roof sensor, hatch, coaxial gun, stepped barrel and twin canisters are present; the turret remains more box-like than the reference."},
+  {"id":"track-repetition","score":0.84,"status":"improved","notes":"Side view now exposes six road wheels, front/rear drive wheels and separate repeated tread links on both assemblies."},
+  {"id":"olive-painted-metal-look","score":0.76,"status":"partial","notes":"Olive painted armor, gunmetal hardware and cool glass read consistently, while photo-specific wear and micro-panel linework remain approximate."}
+]

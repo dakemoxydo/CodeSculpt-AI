@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b100d" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>CodeSculpt / MBT-01</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="#viewer" aria-label="CodeSculpt home">
+          <span class="brand-mark">CS</span>
+          <span><strong>CodeSculpt</strong><small>FIELD ASSEMBLY / 01</small></span>
+        </a>
+        <div class="topbar-meta"><span class="live-dot"></span><span>REALTIME SCULPT</span><span class="slash">/</span><span>MBT-01</span></div>
+      </header>
+
+      <main class="workspace" id="viewer">
+        <section class="viewer-shell" aria-label="Interactive 3D model viewer">
+          <div id="canvas-wrap" class="canvas-wrap"></div>
+          <div class="viewer-overlay viewer-overlay--top"><span class="eyebrow">OBJECT / ARMORED VEHICLE</span><span class="view-label" id="view-label">ISOMETRIC / 3-4</span></div>
+          <div class="viewer-overlay viewer-overlay--bottom"><span>DRAG TO ORBIT · SCROLL TO ZOOM · CLICK TO INSPECT</span><span class="frame-id">REF 04—17 / FIVE-VIEW STUDY</span></div>
+          <div class="reticle reticle--tl"></div><div class="reticle reticle--br"></div>
+        </section>
+
+        <aside class="inspector" aria-label="Model inspector">
+          <div class="inspector-intro">
+            <div class="status-chip status-chip--review" id="asset-status" aria-live="polite"><span class="status-dot"></span> REVIEW / BLOCKOUT</div>
+            <h1>MBT<span>—01</span></h1>
+            <p>Futuristic main battle tank<br />Procedural hard-surface study</p>
+          </div>
+
+          <div class="inspector-section">
+            <div class="section-kicker"><span>01</span> VIEW RIG</div>
+            <div class="control-row"><label for="explode">Explode assembly</label><output id="explode-value">0%</output></div>
+            <input id="explode" class="range" type="range" min="0" max="100" value="0" aria-label="Explode assembly" />
+            <div class="button-grid">
+              <button class="control-button control-button--primary" id="reset-view">Reset view <span>↺</span></button>
+              <button class="control-button" id="top-view">Top <span>↑</span></button>
+              <button class="control-button" id="front-view">Front <span>→</span></button>
+              <button class="control-button" id="side-view">Side <span>←</span></button>
+            </div>
+            <label class="toggle-row"><input id="auto-orbit" type="checkbox" /><span class="toggle-ui"></span><span>Auto orbit</span></label>
+            <label class="toggle-row"><input id="wireframe" type="checkbox" /><span class="toggle-ui"></span><span>Technical wireframe</span></label>
+          </div>
+
+          <div class="inspector-section inspector-section--selected">
+            <div class="section-kicker"><span>02</span> SELECTED PART</div>
+            <div class="selected-part"><span class="selected-index" id="selected-index">00</span><div><strong id="selected-name">Whole assembly</strong><small id="selected-role">root / transformable</small></div></div>
+            <div class="part-meta"><span>TRIS</span><strong id="tri-count">—</strong><span>NODES</span><strong id="node-count">15</strong></div>
+          </div>
+
+          <div class="inspector-section inspector-section--reference">
+            <div class="section-kicker"><span>03</span> SOURCE STUDY</div>
+            <div class="reference-card"><img src="/reference.png" alt="Futuristic tank multi-view reference" /><div><strong>Five-view reference</strong><small>Stylized olive composite / 1024px</small></div></div>
+          </div>
+
+          <div class="inspector-foot"><span>PROCEDURAL / THREE.JS</span><span id="fps">60 FPS</span></div>
+        </aside>
+      </main>
+
+      <footer class="footerbar"><span><b class="footer-key">LMB</b> orbit <b class="footer-key">WHEEL</b> zoom <b class="footer-key">RMB</b> pan</span><span>APPROXIMATE RECONSTRUCTION · HIDDEN SURFACES INFERRED</span></footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

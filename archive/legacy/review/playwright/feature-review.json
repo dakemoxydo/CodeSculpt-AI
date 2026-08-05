@@ -1,0 +1,6 @@
+[
+  {"id":"hull-silhouette","score":0.78,"status":"improved","notes":"Low wedge hull reads clearly, but side-skirt blocks are simpler and less faceted than the reference."},
+  {"id":"turret-cannon-system","score":0.79,"status":"improved","notes":"Rotating faceted turret, mantlet, stepped barrel, muzzle bore, roof sensor, and canisters are present; turret remains more box-like."},
+  {"id":"track-repetition","score":0.74,"status":"partial","notes":"Bilateral track groups, six wheels per side, tread instances, and hubs are explodable; track armor is less dense than the reference."},
+  {"id":"olive-painted-metal-look","score":0.76,"status":"improved","notes":"Olive armor, gunmetal hardware, glass accents, bevel response, and cavity shadowing read consistently; exact photo wear is approximate."}
+]

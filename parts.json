@@ -1,0 +1,122 @@
+{
+  "model": "futuristic-mbt-tank",
+  "parts": [
+    {
+      "name": "hull_shell",
+      "kind": "part",
+      "module": "hull",
+      "triangles": 2400
+    },
+    {
+      "name": "track_left",
+      "kind": "part",
+      "module": "tracks",
+      "triangles": 3100
+    },
+    {
+      "name": "track_right",
+      "kind": "part",
+      "module": "tracks",
+      "triangles": 3100
+    },
+    {
+      "name": "turret_shell",
+      "kind": "part",
+      "module": "turret",
+      "triangles": 2200
+    },
+    {
+      "name": "main_barrel",
+      "kind": "part",
+      "module": "cannon",
+      "triangles": 800
+    },
+    {
+      "name": "hull_glacis",
+      "kind": "part",
+      "module": "armor",
+      "triangles": 700
+    },
+    {
+      "name": "engine_deck",
+      "kind": "part",
+      "module": "engine",
+      "triangles": 900
+    },
+    {
+      "name": "side_skirts",
+      "kind": "part",
+      "module": "armor",
+      "triangles": 450
+    },
+    {
+      "name": "mantlet",
+      "kind": "part",
+      "module": "turret",
+      "triangles": 420
+    },
+    {
+      "name": "road_wheels",
+      "kind": "part",
+      "module": "suspension",
+      "triangles": 1200
+    },
+    {
+      "name": "track_links",
+      "kind": "part",
+      "module": "tracks",
+      "triangles": 1600
+    },
+    {
+      "name": "suspension_rods",
+      "kind": "part",
+      "module": "suspension",
+      "triangles": 360
+    },
+    {
+      "name": "sensor_cluster",
+      "kind": "part",
+      "module": "sensors",
+      "triangles": 420
+    },
+    {
+      "name": "deck_vents",
+      "kind": "part",
+      "module": "engine",
+      "triangles": 260
+    },
+    {
+      "name": "turret_canisters",
+      "kind": "part",
+      "module": "turret",
+      "triangles": 520
+    },
+    {
+      "name": "smoke_launcher_pods",
+      "kind": "part",
+      "module": "turret",
+      "triangles": 340
+    },
+    {
+      "name": "rear_port_modules",
+      "kind": "part",
+      "module": "engine",
+      "triangles": 340
+    },
+    {
+      "name": "front_track_fenders",
+      "kind": "part",
+      "module": "armor",
+      "triangles": 450
+    },
+    {
+      "name": "rear_engine_armor",
+      "kind": "part",
+      "module": "armor",
+      "triangles": 340
+    }
+  ],
+  "unnamedMeshes": 0,
+  "integralMeshes": 0,
+  "specifiedComponents": 19
+}

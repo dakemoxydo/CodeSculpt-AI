@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.93,
+  "estimatedFidelity": 0.93,
+  "targetThreshold": 0.7,
+  "materialId": "armor",
+  "sourceImage": "C:\\Users\\dakem\\Documents\\VibeCodeProjects\\CodeSculptAi\\.img2threejs\\reference.png",
+  "outDir": "C:\\Users\\dakem\\Documents\\VibeCodeProjects\\CodeSculptAi\\.img2threejs\\pbr-evidence",
+  "palette": [
+    "#383A39",
+    "#2A2F20",
+    "#585F47",
+    "#0F110C",
+    "#767D65"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\dakem\\Documents\\VibeCodeProjects\\CodeSculptAi\\.img2threejs\\pbr-evidence\\armor_albedo.png",
+      "url": "armor_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\dakem\\Documents\\VibeCodeProjects\\CodeSculptAi\\.img2threejs\\pbr-evidence\\armor_roughness.png",
+      "url": "armor_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\dakem\\Documents\\VibeCodeProjects\\CodeSculptAi\\.img2threejs\\pbr-evidence\\armor_height.png",
+      "url": "armor_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\dakem\\Documents\\VibeCodeProjects\\CodeSculptAi\\.img2threejs\\pbr-evidence\\armor_normal.png",
+      "url": "armor_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\dakem\\Documents\\VibeCodeProjects\\CodeSculptAi\\.img2threejs\\pbr-evidence\\armor_ao.png",
+      "url": "armor_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "mapSize": 1024,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1448,
+      "height": 1086
+    },
+    "mask": {
+      "backgroundColor": "#252529",
+      "backgroundNoise": 11.576,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.5373
+    },
+    "mapStats": {
+      "valueRange": 0.4137,
+      "heightP90Gradient": 0.07044,
+      "roughnessBase": 0.695,
+      "roughnessVariation": 0.141,
+      "normalStrength": 0.239,
+      "blurRadius": 21
+    },
+    "palette": [
+      "#383A39",
+      "#2A2F20",
+      "#585F47",
+      "#0F110C",
+      "#767D65"
+    ]
+  },
+  "warnings": [],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

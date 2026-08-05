@@ -1,0 +1,8 @@
+node_modules/
+dist/
+output/playwright/
+.playwright-cli/
+graphify-out/
+*.log
+vite-preview.err.log
+vite-preview.log

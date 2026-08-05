@@ -1,0 +1,16 @@
+{
+  "model": "futuristic-mbt-tank",
+  "specifiedComponents": 16,
+  "builtParts": 17,
+  "errors": 0,
+  "warnings": 0,
+  "result": "pass",
+  "findings": [
+    {
+      "check": "part-not-specified",
+      "severity": "info",
+      "subject": "hull_shell",
+      "detail": "built part has no matching component in the spec (fine for detail groups; a sign of spec drift for anything larger)"
+    }
+  ]
+}

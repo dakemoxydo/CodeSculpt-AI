@@ -1,0 +1,191 @@
+{
+  "sourceImage": ".img2threejs/reference.png",
+  "zonesDir": ".img2threejs/detail-grid",
+  "detailInventory": {
+    "scanMethod": "grid-3x3",
+    "targetMinDetails": 6,
+    "details": [
+      {
+        "id": "vent-linework",
+        "kind": "linework",
+        "description": "dark parallel deck/rear vent slots",
+        "region": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "dark parallel deck/rear vent slots",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "deck-vents"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r0c0.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "front-silhouette",
+        "kind": "panel",
+        "description": "sloped front glacis and central ridge",
+        "region": {
+          "x": 0.3333,
+          "y": 0.0,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "macro",
+        "affects": "sloped front glacis and central ridge",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "glacis-ridge"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r0c1.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "track-cadence",
+        "kind": "repetition",
+        "description": "left track loop and wheel cadence",
+        "region": {
+          "x": 0.6667,
+          "y": 0.0,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "macro",
+        "affects": "left track loop and wheel cadence",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "track-loop-left"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r0c2.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "track-cadence-right",
+        "kind": "repetition",
+        "description": "right track loop and wheel cadence",
+        "region": {
+          "x": 0.0,
+          "y": 0.3333,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "macro",
+        "affects": "right track loop and wheel cadence",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "track-loop-right"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r1c0.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "turret-edge",
+        "kind": "edge",
+        "description": "faceted turret shell bevels",
+        "region": {
+          "x": 0.3333,
+          "y": 0.3333,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "macro",
+        "affects": "faceted turret shell bevels",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "turret-bevel"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r1c1.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "barrel-rings",
+        "kind": "ring",
+        "description": "repeating barrel rings and muzzle bore",
+        "region": {
+          "x": 0.6667,
+          "y": 0.3333,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "repeating barrel rings and muzzle bore",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "barrel-rings"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r1c2.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "canister-ports",
+        "kind": "port",
+        "description": "turret rear canister ports",
+        "region": {
+          "x": 0.0,
+          "y": 0.6667,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "turret rear canister ports",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "canister-ports"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r2c0.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "rear-seam",
+        "kind": "seam",
+        "description": "rear engine armor seam",
+        "region": {
+          "x": 0.3333,
+          "y": 0.6667,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "rear engine armor seam",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "rear_engine_armor-seam"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r2c1.png",
+        "confidence": 0.82
+      },
+      {
+        "id": "sensor-housings",
+        "kind": "housing",
+        "description": "top sensor housings",
+        "region": {
+          "x": 0.6667,
+          "y": 0.6667,
+          "width": 0.3333,
+          "height": 0.3333,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "top sensor housings",
+        "mapsTo": {
+          "type": "component.localFeature",
+          "ref": "sensor-housings"
+        },
+        "evidenceRef": ".img2threejs\\detail-grid\\zone-r2c2.png",
+        "confidence": 0.82
+      }
+    ]
+  },
+  "authoringInstruction": "Open each zone crop under zonesDir and replace every detail stub's kind, description, scale, affects, mapsTo, and confidence with what is actually observed. Add more detail entries per zone if a single zone contains multiple distinct marks; do not leave stubs unfilled or unlinked (mapsTo must reference a real component.localFeatures or material.localOverrides entry)."
+}
